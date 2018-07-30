@@ -7,7 +7,7 @@ Like CowSay but from the inside of a bog roll.
 Install go, clone the repo or whatever & run the following.
 
 ```
-go build && ./rollsay
+go build && ./rollsay Hello, World! This will appear on the bog roll
 ```
 
 # TODO

@@ -2,18 +2,16 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strings"
 )
 
 func main() {
 
-	out := "\n" + roll(quote())
+	quote := strings.Join(os.Args[1:], " ")
+	out := "\n" + roll(quote)
 
 	fmt.Println(out)
-}
-
-func quote() string {
-	return "Life rolls on and on and on and on.."
 }
 
 func roll(quote string) string {
