@@ -1,6 +1,14 @@
 # Rollsay
 
-Like CowSay but from the inside of a bog roll.
+```
+         .--""--.___..____..____..____..____..____..___.._
+        (  (__)  )     ⠃     ⠃     ⠃     ⠃     ⠃     ⠃    '--.
+        |'--..--'|     Like CowSay, only its a bog roll.    <|
+        |       :|     ⠰     ⠰     ⠰     ⠰     ⠰     ⠰      /
+        |       :|--""----""----""----""----""----""---""-./
+        '.__  __;'
+        
+```
 
 # How do I work the funky gibbon?
 
