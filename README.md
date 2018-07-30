@@ -10,6 +10,8 @@
         
 ```
 
+*Just for fun.*
+
 # How do I work the funky gibbon?
 
 Install go, clone the repo or whatever & run the following.
@@ -35,6 +37,4 @@ The bog roll will prefer arguments (first example) over piped data if arguments 
 
 # TODO
 
-**Please try to keep this up to date**
-
-Nothing? There's gotta be something..
+Nothing? There's gotta be something.. Maybe check issues or something?
