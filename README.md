@@ -24,13 +24,13 @@ go build
 **Use arguments..** 
 
 ```
-./rollsay Hello, World!
+./rollsay Hello, World
 ```
 
 **..or use pipes**
 
 ```
-echo "Hello, World!" | ./rollsay
+echo "Hello, World" | ./rollsay
 ```
 
 The bog roll will prefer arguments (first example) over piped data if arguments are provided.
