@@ -2,27 +2,23 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"strings"
-	"time"
 )
 
 func main() {
 
-	// establish random number of sheets
-	rand.Seed(time.Now().UnixNano())
-	n := rand.Intn(8-3) + 3
-
-	out := "\n            " + quote() + "\n" + roll(n)
+	out := "\n" + roll(quote())
 
 	fmt.Println(out)
 }
 
 func quote() string {
-	return "Life rolls on and on.. "
+	return "Life rolls on and on and on and on.."
 }
 
-func roll(sheets int) string {
+func roll(quote string) string {
+
+	sheets := (len(quote) / 6) + 1
 
 	roll := strings.Split(`
 	 .--""--.__.._
@@ -34,14 +30,15 @@ func roll(sheets int) string {
 	`, "\n")
 
 	// sheets insert at index 11
-
-	sheet := [5]string{"__..__", "     :", "     :", "     :", "--\"\"--"}
+	sheet := [5]string{"__..__", "     ⠃", "      ", "     ⠰", "--\"\"--"}
 
 	for n := 0; n < sheets; n++ {
 		for p := 0; p < 5; p++ {
 			roll[p+1] = roll[p+1][:11] + sheet[p] + roll[p+1][11:]
 		}
 	}
+
+	roll[3] = roll[3][:16] + quote + roll[3][16+len(quote):]
 
 	return strings.Join(roll, "\n")
 
