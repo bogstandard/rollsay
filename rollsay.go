@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"strings"
@@ -8,7 +9,17 @@ import (
 
 func main() {
 
-	quote := strings.Join(os.Args[1:], " ")
+	var quote string
+
+	// prefer direct input via args over piped in
+	if len(os.Args[1:]) > 0 {
+		quote = strings.Join(os.Args[1:], " ")
+	} else {
+		scanner := bufio.NewScanner(os.Stdin)
+		scanner.Scan()
+		quote = scanner.Text()
+	}
+
 	out := "\n" + roll(quote)
 
 	fmt.Println(out)

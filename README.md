@@ -14,9 +14,24 @@
 
 Install go, clone the repo or whatever & run the following.
 
+**Build the thing**
 ```
-go build && ./rollsay Hello, World! This will appear on the bog roll
+go build
 ```
+
+**Use arguments..** 
+
+```
+./rollsay Hello, World!
+```
+
+**..or use pipes**
+
+```
+echo "Hello, World!" | ./rollsay
+```
+
+The bog roll will prefer arguments (first example) over piped data if arguments are provided.
 
 # TODO
 
